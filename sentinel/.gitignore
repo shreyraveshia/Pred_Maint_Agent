@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/dev/
+data/heldout/
+data/tiny/
+data/assets.json
+data/manifest.json
+chroma_db/
+*.sqlite
+.pytest_cache/

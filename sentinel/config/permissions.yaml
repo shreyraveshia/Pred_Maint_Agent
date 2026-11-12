@@ -1,0 +1,24 @@
+# Agent identity & permissions. Enforced in code by contracts/permissions.py
+agent_identity:
+  name: sentinel-agent
+  type: service
+  description: Explains risks and drafts work orders. Never approves anything.
+
+allowed_tools:          # allow-list: anything not here is denied
+  get_asset: read
+  get_history: read
+  check_spares: read
+  create_draft_work_order: draft_write
+
+human_only_actions:     # only a logged-in planner in the dashboard may do these
+  - approve_work_order
+  - edit_work_order
+  - reject_work_order
+
+never_do:               # the agent must never attempt these, ever
+  - approve_work_order
+  - delete_work_order
+  - edit_posted_work_order
+  - direct_database_access
+  - modify_sensor_data
+  - send_external_messages

@@ -1,0 +1,21 @@
+# Core
+pydantic>=2.6
+pyyaml
+python-dotenv
+numpy
+pandas
+pyarrow
+# Azure / LLM (verify against current Azure AI Foundry docs)
+azure-ai-inference
+openai
+# RAG
+chromadb
+# MCP + agent
+mcp
+langgraph
+# UI
+streamlit
+plotly
+matplotlib
+# Quality
+pytest
